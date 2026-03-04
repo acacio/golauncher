@@ -133,11 +133,11 @@ In both cases golauncher waits for every goroutine to finish before it exits its
 
 ```dockerfile
 FROM scratch
-COPY golauncher   /golauncher
-COPY myapp.textproto /myapp.textproto
+COPY golauncher     /golauncher
+COPY golauncher.cfg /golauncher.cfg
 ENTRYPOINT ["/golauncher"]
 # or with an explicit config path:
-# ENTRYPOINT ["/golauncher", "/myapp.cfg"]
+# ENTRYPOINT ["/golauncher", "/golauncher.cfg"]
 ```
 
 ### docker run
