@@ -1,0 +1,18 @@
+# golauncher example configuration
+# Each "process" block defines one child process to run.
+
+process {
+  name: "web"
+  command: "/usr/bin/python3"
+  args: "-m"
+  args: "http.server"
+  args: "8080"
+  env: "HOME=/tmp"
+}
+
+process {
+  name: "worker"
+  command: "/bin/sh"
+  args: "-c"
+  args: "while true; do echo tick; sleep 5; done"
+}
