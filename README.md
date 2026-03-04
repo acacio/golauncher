@@ -9,6 +9,7 @@ A minimal process launcher designed to run as PID 1 inside a container. It start
 - Forwards `SIGINT` and `SIGTERM` to all children
 - Shuts down all processes when any one of them exits
 - Waits for every child to finish before exiting (clean drain)
+- If one child process exits, terminate all other to ensure all processes stop together.
 - Single static binary — no CGO, no external dependencies
 
 ## Build
